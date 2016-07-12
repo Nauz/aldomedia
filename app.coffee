@@ -15,7 +15,7 @@ cssnano         = require 'cssnano'
 
 
 module.exports =
-  ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'ship.*conf']
+  ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'ship.*conf', '.npmrc', 'views/*.sublime-project']
 
   extensions: [
     js_pipeline(files: 'assets/js/*.coffee'),
