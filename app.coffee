@@ -6,6 +6,7 @@ js_pipeline     = require 'js-pipeline'
 css_pipeline    = require 'css-pipeline'
 accord          = require 'accord'
 postcss         = accord.load 'postcss'
+rucksack        = require 'rucksack-css'
 lost            = require 'lost'
 font_magician   = require 'postcss-font-magician'
 postcss_modules = require 'postcss-modules'
@@ -38,6 +39,7 @@ module.exports =
       font_magician({
         hosted: 'assets/fonts'
         }),
+      rucksack(),
       postcss_autoreset({
         reset: 'sizes',
         rulesMatcher: 'suit'
