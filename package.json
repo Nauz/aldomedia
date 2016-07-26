@@ -25,6 +25,9 @@
     "postcss-autoreset": "^1.1.5",
     "postcss-font-magician": "^1.4.0",
     "postcss-initial": "^1.5.1",
-    "postcss-modules": "^0.5.0"
+    "postcss-modules": "^0.5.0",
+    "postcss-nested": "^1.0.0",
+    "postcss-nesting": "^2.3.1",
+    "typographic": "^2.9.3"
   }
 }

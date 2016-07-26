@@ -1,35 +1,54 @@
 @lost flexbox flex
 
+@import 'typographic'
+$min-font           = 12px
+$max-font           = 20px
+$min-width          = 400px
+$max-width          = 1140px
+typographic()
+
 html
 	all initial
-	font-size 16px 
-	font-size: responsive;
-	min-font-size: 16px
+	// font-size 16px 
+	// font-size: responsive;
+	// min-font-size: 16px
 
 body
-	// all initial
-	// lost-utility edit
+	all initial
+	t-p()
+	lost-utility edit
 	background #58303F
 	font-family $opensans
 
 h1, h2, h3
 	color white
 	font-family "Days One"
-	font-size 2.4em
 	font-weight 700
 	text-transform uppercase
-	text-align center
+	// text-align center
 
+$min-font = 14px
+$max-font = 30px
 h2
 	color #b9b9b9
-	font-size 30px
-	margin 71px auto 57px auto
+	t-h2()
+	
+	// font-size 30px
+	// margin 71px auto 57px auto
 	text-align center
 	
 h3
-	font-size 18px
-	text-align left	
+	// font-size 18px
+	text-align left
 
+img
+	display block
+	min-width 100%
+	height auto
+
+
+// a
+// 	all initial
 // .cf
 // 	lost-utility clearfix
 .g-center
@@ -48,6 +67,7 @@ h3
 
 .g-in-sec
 	align-items flex-start
+	margin-bottom 84px 
 
 
 .g-sec_h
@@ -67,12 +87,14 @@ h3
 	min-height 100%
 	align-self stretch
 
+$min-font = 5px
+$max-font = 18px
 .al_g-btn
 	all initial
+	t-p()
 	border-radius 10px
-	padding 18px 28px
+	padding vr-block(0.5) vr-block($minor-second)
 	color white
-	font-family "Days One"
-	font-size 18px
+	font-family 'Days One'
 	font-weight 700
 	text-transform uppercase	

@@ -8,9 +8,8 @@
 		margin 0 auto
 	.al_g-btn
 		font-size 14px
-		border 2px solid #f28094
+		border 2px solid rgba(#f28094, 0.4)
 		padding 15px
-		font-family "Days One"
 		justify-self: center;
 		align-self: flex-start
 	.g-in-sec
@@ -21,16 +20,20 @@
 	margin: 30px auto
 	background #e6e6e6 url(/img/arrow-b.svg) 0 0 no-repeat
 
+$min-font = 8px
+$max-font = 14px
+$line-height-ratio  = 1.75
 .descr-ftb
+	t-p()
 	lost-flex-container row
 	background #ea2c4e
-	padding 40px 33px 40px 50px
+	padding vr-block(1.6) vr-block(1.32) vr-block(1.6) vr-block(2)
+	// 40px 33px 40px 50px
 	color white
-	height 100% 
+	height 100%
 	align-self stretch
-	h3
-		margin-bottom 22px
-		font-family "Days One"
-	p
-		font-size 14px
-		margin-bottom 37px 
+	// h3
+	// 	font-family "Days One"
+	// p
+	// 	// font-size 14px
+	// 	// margin-bottom 37px 

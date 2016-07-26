@@ -9,10 +9,13 @@ postcss         = accord.load 'postcss'
 rucksack        = require 'rucksack-css'
 lost            = require 'lost'
 font_magician   = require 'postcss-font-magician'
+typographic     = require 'typographic'
+postcss_nested  = require 'postcss-nested'
+postcss_nesting  = require 'postcss-nesting'
 postcss_modules = require 'postcss-modules'
 postcss_initial = require 'postcss-initial'
 postcss_autoreset = require 'postcss-autoreset'
-cssnano         = require 'cssnano' 
+cssnano           = require 'cssnano' 
 
 
 module.exports =
@@ -24,8 +27,9 @@ module.exports =
   ]
 
   stylus:
-    use: [axis(), rupture(), autoprefixer()]
+    use: [axis(), rupture(), typographic()]
     sourcemap: true
+    'import css': true
 
   'coffee-script':
     sourcemap: true
@@ -39,13 +43,17 @@ module.exports =
       font_magician({
         hosted: 'assets/fonts'
         }),
-      rucksack(),
-      postcss_autoreset({
-        reset: 'sizes',
-        rulesMatcher: 'suit'
-        }),
-      postcss_initial(),
-      cssnano({
-        core: false
+      postcss_nested(),
+      postcss_nesting(),
+      # rucksack(),
+      # postcss_autoreset({
+      #   # reset: 'initial',
+      #   # rulesMatcher: 'bem'
+      #   }),
+      postcss_initial({
+        reset: 'inherited'
         })
+      # cssnano({
+      #   core: false
+      #   })
     ]

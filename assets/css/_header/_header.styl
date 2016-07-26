@@ -8,11 +8,14 @@
 	lost-offset -2/70 column
 	opacity 0.8
 	background-color #482030
-	padding: 12px 0;
+	padding: vr-block(.5) 0;
+	
 	
 .logoContainer
+	all initial
 	lost-column 2/12
 	lost-offset 3/12
+	lost-align middle-left
 
 #logo-site
 	display flex
@@ -21,16 +24,18 @@
 #logo-pic
 	display: inline-block
 
-
+$min-font = 6px
+$max-font = 14px
 .main-nav
+	all initial
 	lost-column 7/12
 	font-family "Days One"
 	color white
-	font-size 0.875rem
 	font-weight 700
 	text-transform uppercase
 	background-color #482030
 	ul
+		all initial
 		display: flex;
 		width: 100%;
 		justify-content: space-between
@@ -41,9 +46,9 @@
 			font-family "Days One"
 			a
 				all initial
+				t-p()
 				color white
 				font-family "Days One"
-				font-size 14px
 				font-weight 700
 				text-transform uppercase
 				&:hover
@@ -55,13 +60,15 @@
 	lost-offset -15/40 column
 	background #4b2333
 	color #fff
-
-
+	
+$min-font = 10px
+$max-font = 18px
 .utp_descr
-	font-size 1.125rem
+	t-p()
 	font-weight 400
-	line-height 1.5rem
-	font-family "Open Sans", Verdana, Tahoma, Arial, sans-serif
+	color white
+	font-family $opensans
+	text-align center
 
 .utp_buttons
 	display: flex
@@ -69,18 +76,20 @@
 	justify-content center
 	margin 40px 0 70px 0
 
-
-.al_g-btn_learn-more
+.al_g-btn
 	border 2px solid #ea2c4e
+
 .al_g-btn_call_back
 	border 2px solid #5fc79a
 
+$min-font = 14px
+$max-font = 36px
 .al_g-utp_buttons-between
+	t-p()
 	display block
 	color white
 	font-family Georgia
-	font-size 36px
 	font-style italic
-	margin 0 12px
+	margin 0 vr-block(.333)
 
 @import '_slider'
