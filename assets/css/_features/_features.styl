@@ -4,7 +4,9 @@
 	background #fff
 	.icon-ftb
 		display block
-		size 180px
+		// size 180px
+		min-width: auto 
+		height: auto
 		margin 0 auto
 	.al_g-btn
 		font-size 14px
@@ -18,7 +20,7 @@
 .sep-ftp
 	size 63px 13px
 	margin: 30px auto
-	background #e6e6e6 url(/img/arrow-b.svg) 0 0 no-repeat
+	background url(/img/arrow-b.svg) 0 0 no-repeat
 
 $min-font = 8px
 $max-font = 14px
@@ -32,8 +34,12 @@ $line-height-ratio  = 1.75
 	color white
 	height 100%
 	align-self stretch
-	// h3
-	// 	font-family "Days One"
-	// p
-	// 	// font-size 14px
-	// 	// margin-bottom 37px 
+	h3
+		height: auto
+		align-self none
+		font-size 1.125em
+		font-family "Days One"
+		// t-header()
+	// p	
+	// 	font-size 14px
+	// 	margin-bottom 37px 

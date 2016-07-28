@@ -1,6 +1,13 @@
+$min-font = 10px
+$max-font = 20px
 #header-site
-	height 100%
-	background #58303F url(/img/header.svg) no-repeat
+	// min-height 27rem
+	// lost-row 2/3 0
+	// min-height 684px 
+	// height vr-block(20)
+	// max-width 1600px
+	min-height 684px
+	background #58303F url(/img/header.svg) center top no-repeat
 	background-size: contain
 	lost-flex-container column
 
@@ -9,8 +16,7 @@
 	opacity 0.8
 	background-color #482030
 	padding: vr-block(.5) 0;
-	
-	
+		
 .logoContainer
 	all initial
 	lost-column 2/12
@@ -20,13 +26,16 @@
 #logo-site
 	display flex
 	align-items center
+	
 
 #logo-pic
-	display: inline-block
+	display: block
+	height 2.7em
 
 $min-font = 6px
 $max-font = 14px
 .main-nav
+.footer-nav
 	all initial
 	lost-column 7/12
 	font-family "Days One"
@@ -39,7 +48,7 @@ $max-font = 14px
 		display: flex;
 		width: 100%;
 		justify-content: space-between
-		height 100% 
+		height 100%
 		align-items center
 		li
 			all initial
@@ -54,10 +63,13 @@ $max-font = 14px
 				&:hover
 					text-decoration underline
 
+#header-utp
+	lost-flex-container: column;
+
 #utp
 	lost-flex-container: column;	
-	lost-row 10/40 0
-	lost-offset -15/40 column
+	// lost-row 10/40 0
+	// lost-offset -15/40 column
 	background #4b2333
 	color #fff
 	
@@ -81,6 +93,7 @@ $max-font = 18px
 
 .al_g-btn_call_back
 	border 2px solid #5fc79a
+	background-color rgba(95, 199, 154, 0.8)
 
 $min-font = 14px
 $max-font = 36px
